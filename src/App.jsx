@@ -20,6 +20,7 @@ import Mahindra from "./pages/Mahindra.jsx";
 import Bmw from "./pages/Bmw.jsx";
 import Verna from "./pages/Verna.jsx";
 import Fortuner from "./pages/Fortuner.jsx";
+import Hi from "./components/hi.jsx";
 
 // Custom Navbar component based on the route
 const ConditionalNavbar = () => {
@@ -65,6 +66,7 @@ function App() {
           <Route path="/bmw" element={<Bmw />} />
           <Route path="/verna" element={<Verna />} />
           <Route path="/fortuner" element={<Fortuner />} />
+          <Route path="/hi" element={<Hi />} />
         </Routes>
         <ConditionalFooter />
       </BrowserRouter>

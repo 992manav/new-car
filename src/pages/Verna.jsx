@@ -21,7 +21,7 @@ const Verna = () => {
     // Append to head
     document.head.appendChild(bootstrapLink);
 
-    // Cleanup: remove link when component is unmounted
+    //Cleanup: remove link when component is unmounted
     return () => {
       document.head.removeChild(bootstrapLink);
     };

@@ -5,6 +5,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -35,12 +36,12 @@ const Footer = () => {
                 "Rear Bumpers",
               ].map((item) => (
                 <li key={item} className="mb-3 cursor-pointer">
-                  <a
-                    href={`/parts/${item.toLowerCase().replace(" ", "")}`}
+                  <Link
+                    to={`/parts/${item.toLowerCase().replace(" ", "")}`}
                     className="text-gray-300 hover:text-red-500 transition-colors duration-300"
                   >
                     {item}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -67,12 +68,12 @@ const Footer = () => {
                 "Catalytic Converters",
               ].map((item) => (
                 <li key={item} className="mb-3 cursor-pointer">
-                  <a
-                    href={`/parts/${item.toLowerCase().replace(" ", "")}`}
+                  <Link
+                    to={`/parts/${item.toLowerCase().replace(" ", "")}`}
                     className="text-gray-300 hover:text-red-500 transition-colors duration-300"
                   >
                     {item}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -87,12 +88,12 @@ const Footer = () => {
             <ul>
               {["About Us", "Contact Us"].map((item) => (
                 <li key={item} className="mb-3 cursor-pointer">
-                  <a
-                    href={`${item.toLowerCase().replace(" ", "")}`}
+                  <Link
+                    to={`/parts/${item.toLowerCase().replace(" ", "")}`}
                     className="text-gray-300 hover:text-red-500 transition-colors duration-300"
                   >
                     {item}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -1,7 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Featured = () => {
+  const navigate = useNavigate();
+
   const cars = [
     {
       name: "Mahindra Thar",
@@ -58,7 +61,7 @@ const Featured = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: index * 0.2 }}
           >
-            <a href={car.link} target="_blank" rel="noopener noreferrer">
+            <Link to={car.link}>
               <motion.img
                 src={car.imgSrc}
                 alt={car.name}
@@ -66,16 +69,9 @@ const Featured = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               />
-            </a>
+            </Link>
             <h4 className="text-xl font-semibold mb-2">
-              <a
-                href={car.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white"
-              >
-                {car.name}
-              </a>
+              <div className="hover:text-white">{car.name}</div>
             </h4>
             <ul className="text-white mb-2">
               <li>{car.transmission}</li>
